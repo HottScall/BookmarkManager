@@ -34,6 +34,10 @@ In order to run the app, go to the bookmark manager repo, run "rackup" and then 
 * Connect to the database using the pqsl command *\c bookmark_ruby*
 * Run the query we have saved in the file *01_create_bookmarks_table.sql*
 
+<h4 align="center">Test Database Added</h4>
+
+Create a test database in psql and run the psql command for both databases.
+
 <h4 align="center">Manipulating Database data</h4>
 
 * Show a list of records in the table *SELECT * FROM bookmarks;*
