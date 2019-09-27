@@ -17,11 +17,15 @@ This project uses BDD and the challenge is to;
 7. Filter bookmarks by tag
 8. Users are restricted to manage only their own bookmarks
 
+<h4 align="center">Project Set Up</h4>
+
 To work on this project, do the following: Clone this repo, navigate to the bookmark-manager file and run bundle install to ensure the dependacies are loaded. 
+
+<h4 align="center">Page Navigation</h4>
 
 In order to run the app, go to the bookmark manager repo, run "rackup" and then go to the following:
 
-To visit the list of bookmarks go to http://localhost:9292/bookmarks
+1 To show the list of bookmarks go to http://localhost:9292/bookmarks
 
 <h4 align="center">How to run the PSQL Database</h4>
 
