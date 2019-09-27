@@ -1,10 +1,12 @@
 <h1 align="center">BookmarkManager<h1>
 <h2 align="center">A bookmark manager web application with database</h2>
+  
+<h4 align="center">A simple bookmark manager web application with postgres database</h4>
 
-**Language: Ruby 
-**Testing: Rspec, Capybara
-**Linter: Rubocop
-**Database: psql
+1. **Language: Ruby**
+2. **Testing: Rspec, Capybara**
+3. **Linter: Rubocop**
+4. **Database: psql**
 
 This project uses BDD and the challenge is to;
 
