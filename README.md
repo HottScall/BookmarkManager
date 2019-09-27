@@ -1,7 +1,5 @@
 <h1 align="center">BookmarkManager<h1>
 <h2 align="center">A bookmark manager web application with database</h2>
-  
-<h4 align="center">A simple bookmark manager web application with postgres database</h4>
 
 1. **Language: Ruby**
 2. **Testing: Rspec, Capybara**
@@ -25,7 +23,15 @@ In order to run the app, go to the bookmark manager repo, run "rackup" and then 
 
 To visit the list of bookmarks go to http://localhost:9292/bookmarks
 
-* In order to run the database, connect to psql using *\c*
+<h4 align="center">How to run the PSQL Database</h4>
+
+* Connect to psql using *\c*
 * Create the database using the psql command *CREATE DATABASE bookmark_ruby*
 * Connect to the database using the pqsl command *\c bookmark_ruby*
 * Run the query we have saved in the file *01_create_bookmarks_table.sql*
+
+<h4 align="center">Manipulating Database data</h4>
+
+* Show a list of records in the table *SELECT * FROM bookmarks;*
+* Delete records from a database *DELETE FROM bookmarks WHERE url = 'http://www.steve.com';*
+* Update records in a database *UPDATE bookmarks SET url = 'http://www.dave.com' WHERE url = 'http://www.steve.com';*
