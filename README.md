@@ -36,7 +36,7 @@ In order to run the app, go to the bookmark manager repo, run "rackup" and then 
 
 <h4 align="center">Test Database Added</h4>
 
-Create a test database in psql and run the psql command for both databases.
+Test database files and code added to the spechelper and within the ruby code, to ensure your tests works, create a test database in psql and run the psql command for both databases.
 
 <h4 align="center">Manipulating Database data</h4>
 
