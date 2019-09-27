@@ -1,9 +1,9 @@
+require 'pg'
+
 class Bookmark
   def self.all
-    [
-      'https://www.skysports.com/',
-      'https://www.linkedin.com/',
-      'https://news.sky.com/'
-    ]
+    connection = PG.connect(dbname: 'bookmark_ruby')
+    result = connection.exec("SELECT * FROM bookmarks;")
+    result.map { |bookmark| bookmark['url'] }
   end
 end
