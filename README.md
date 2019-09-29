@@ -19,7 +19,11 @@ This project uses BDD and the challenge is to;
 
 <h4 align="center">Project Set Up</h4>
 
-To work on this project, do the following: Clone this repo, navigate to the bookmark-manager file and run bundle install to ensure the dependacies are loaded. 
+To work on this project, do the following: Clone this repo and run *bundle* to ensure the dependacies are loaded. 
+
+<h4 align="center">Database Set Up</h4>
+
+To set up the databases connect to psql and setup *bookmark_ruby* and *bookmark_ruby_test* databases. Then used the SQL scripts in the _db/migrations_ folder in the given order. 
 
 <h4 align="center">Page Navigation</h4>
 
