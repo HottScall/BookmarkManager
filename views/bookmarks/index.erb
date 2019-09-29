@@ -1,5 +1,20 @@
-<ul>
-  <% @bookmarks.each do |bookmark| %>
-  <li><%= bookmark %></li>
-  <% end %>
-</ul>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Index Page</title>
+    <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>MY FAVOURITE WEBSITES</h1>
+    <div class="bookmarkList">
+      <label for="bookmarksList">Add more websites on the new page</label>
+      <ul>
+        <% @bookmarks.each do |bookmark| %>
+        <h4><li><%= bookmark %></li></h4>
+        <% end %>
+      </ul>
+    </div>
+
+  </body>
+</html>
