@@ -13,15 +13,14 @@
           </style>
   </head>
   <body>
-    <h1 align="center">MY FAVOURITE WEBSITES</h1>
-    <div class="bookmarkList">
-      <h2 align="center">Add more websites on the new page</h2>
-      <ul>
+    <div align="center" class="bookmarkList">
+      <h1>MY FAVOURITE WEBSITES</h1>
+      <h2 align="center">Add more <em>websites</em> on the new page</h2>
         <% @bookmarks.each do |bookmark| %>
-        <p><li><%= bookmark %></li></p>
+          <p>
+            <li><%= bookmark %></li>
+          </p>
         <% end %>
-      </ul>
     </div>
-
   </body>
 </html>
