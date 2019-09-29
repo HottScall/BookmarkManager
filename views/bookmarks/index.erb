@@ -3,15 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Index Page</title>
-    <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text|Roboto&display=swap" rel="stylesheet">
+        <style>
+          body {
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Big Shoulders Text', cursive;
+            font-size: 24px;
+          }
+          </style>
   </head>
   <body>
-    <h1>MY FAVOURITE WEBSITES</h1>
+    <h1 align="center">MY FAVOURITE WEBSITES</h1>
     <div class="bookmarkList">
-      <label for="bookmarksList">Add more websites on the new page</label>
+      <h2 align="center">Add more websites on the new page</h2>
       <ul>
         <% @bookmarks.each do |bookmark| %>
-        <h4><li><%= bookmark %></li></h4>
+        <p><li><%= bookmark %></li></p>
         <% end %>
       </ul>
     </div>
