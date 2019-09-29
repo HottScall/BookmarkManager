@@ -25,7 +25,8 @@ To work on this project, do the following: Clone this repo, navigate to the book
 
 In order to run the app, go to the bookmark manager repo, run "rackup" and then go to the following:
 
-1 To show the list of bookmarks go to http://localhost:9292/bookmarks
+1. To show the list of bookmarks go to http://localhost:9292/bookmarks
+2. To add a new bookmark go to http://localhost:9292/bookmarks/new
 
 <h4 align="center">How to run the PSQL Database</h4>
 
