@@ -1,5 +1,5 @@
 require 'bookmark'
-# require 'database_helpers'
+require 'database_helpers'
 
 describe Bookmark do
   describe './all' do
@@ -7,23 +7,29 @@ describe Bookmark do
       connection = PG.connect(dbname: 'bookmark_ruby_test')
 
       #test data
-      connection.exec("INSERT INTO bookmarks (url) VALUES ('http://www.skysports.com');")
-      connection.exec("INSERT INTO bookmarks (url) VALUES ('https://www.linkedin.com/');")
-      connection.exec("INSERT INTO bookmarks (url) VALUES ('https://news.sky.com/');")
+      bookmark = Bookmark.create(url:'http://www.skysports.com', title: 'Skysports')
+      Bookmark.create(url: 'https://www.linkedin.com/', title: 'LinkedIn')
+      Bookmark.create(url: 'https://news.sky.com/', title: 'Sky News')
 
     bookmarks = Bookmark.all
-      expect(bookmarks).to include("http://www.skysports.com")
-      expect(bookmarks).to include("https://www.linkedin.com/")
-      expect(bookmarks).to include("https://news.sky.com/")
+      expect(bookmarks.length).to eq 3
+      expect(bookmarks.first).to be_a Bookmark
+      expect(bookmarks.first.id).to eq bookmark.id
+      expect(bookmarks.first.title).to eq 'Skysports'
+      expect(bookmarks.first.url).to eq 'http://www.skysports.com'
     end
   end
 
-  describe './new' do
+  describe '.create' do
     it 'adds new bookmarks' do
-      bookmark = Bookmark.create(url: 'http://testbookmark.com', title: 'Test Bookmark').first
+      bookmark = Bookmark.create(url: 'http://testbookmark.com', title: 'Test Bookmark')
+      persisted_data = persisted_data(id: bookmark.id)
 
-      expect(bookmark['url']).to eq 'http://testbookmark.com'
-      expect(bookmark['title']).to eq 'Test Bookmark'
+      expect(bookmark).to be_a Bookmark
+      expect(bookmark.id).to eq persisted_data.first['id']
+      expect(bookmark.title).to eq 'Test Bookmark'
+      expect(bookmark.url).to eq 'http://testbookmark.com'
     end
   end
+
 end
