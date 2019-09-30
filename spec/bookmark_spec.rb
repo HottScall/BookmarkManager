@@ -1,4 +1,5 @@
 require 'bookmark'
+# require 'database_helpers'
 
 describe Bookmark do
   describe './all' do
@@ -19,9 +20,10 @@ describe Bookmark do
 
   describe './new' do
     it 'adds new bookmarks' do
-      Bookmark.create(url: 'http://testbookmark.com')
+      bookmark = Bookmark.create(url: 'http://testbookmark.com', title: 'Test Bookmark').first
 
-      expect(Bookmark.all).to include 'http://testbookmark.com'
+      expect(bookmark['url']).to eq 'http://testbookmark.com'
+      expect(bookmark['title']).to eq 'Test Bookmark'
     end
   end
 end
