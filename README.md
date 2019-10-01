@@ -25,13 +25,6 @@ To work on this project, do the following: Clone this repo and run *bundle* to e
 
 To set up the databases connect to psql and setup *bookmark_ruby* and *bookmark_ruby_test* databases. Then used the SQL scripts in the _db/migrations_ folder in the given order. 
 
-<h4 align="center">Page Navigation</h4>
-
-In order to run the app, go to the bookmark manager repo, run "rackup" and then go to the following:
-
-1. To show the list of bookmarks go to http://localhost:9292/bookmarks
-2. To add a new bookmark go to http://localhost:9292/bookmarks/new
-
 <h4 align="center">How to run the PSQL Database</h4>
 
 * Connect to psql using *\c*
@@ -39,12 +32,16 @@ In order to run the app, go to the bookmark manager repo, run "rackup" and then 
 * Connect to the database using the pqsl command *\c bookmark_ruby*
 * Run the query we have saved in the file *01_create_bookmarks_table.sql*
 
-<h4 align="center">Test Database Added</h4>
-
-Test database files and code added to the spechelper and within the ruby code, to ensure your tests works, create a test database in psql and run the psql command for both databases.
 
 <h4 align="center">Manipulating Database data</h4>
 
 * Show a list of records in the table *SELECT * FROM bookmarks;*
 * Delete records from a database *DELETE FROM bookmarks WHERE url = 'http://www.steve.com';*
 * Update records in a database *UPDATE bookmarks SET url = 'http://www.dave.com' WHERE url = 'http://www.steve.com';*
+
+<h4 align="center">Page Navigation</h4>
+
+In order to run the app, go to the bookmark manager repo, run "rackup" and then go to the following:
+
+1. To show the list of bookmarks go to http://localhost:9292/bookmarks
+2. To add a new bookmark go to http://localhost:9292/bookmarks/new
