@@ -16,17 +16,13 @@
     <div align="center" class="bookmarkList">
       <h1>MY FAVOURITE WEBSITES</h1>
       <h2 align="center">Add more <em>websites</em> on the new page</h2>
-      <ul>
         <% @bookmarks.each do |bookmark| %>
-          <p>
             <li>
               <a href="<%= bookmark.url %>">
                 <%= bookmark.title %>
               </a>
             </li>
-          </p>
         <% end %>
-      </ul>
 
     </div>
   </body>
