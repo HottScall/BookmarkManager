@@ -11,7 +11,6 @@ class Bookmark
 
     result = connection.exec("SELECT * FROM bookmarks;")
     result.map do |bookmark|
-      p Bookmark.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url'])
       Bookmark.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url'])
     end
   end
